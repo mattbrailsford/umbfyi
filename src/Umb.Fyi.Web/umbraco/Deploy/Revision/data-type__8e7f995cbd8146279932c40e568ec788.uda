@@ -1,0 +1,14 @@
+{
+  "Name": "Label (integer)",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Label",
+  "DatabaseType": 2,
+  "Configuration": {
+    "umbracoDataValueType": "INT"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/8e7f995cbd8146279932c40e568ec788",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

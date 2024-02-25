@@ -1,0 +1,27 @@
+{
+  "Name": "Upload Video",
+  "Alias": "",
+  "EditorAlias": "Umbraco.UploadField",
+  "DatabaseType": 1,
+  "Configuration": {
+    "fileExtensions": [
+      {
+        "id": 0,
+        "value": "mp4"
+      },
+      {
+        "id": 1,
+        "value": "webm"
+      },
+      {
+        "id": 2,
+        "value": "ogv"
+      }
+    ]
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/70575fe798124396bbe1c81a76db71b5",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

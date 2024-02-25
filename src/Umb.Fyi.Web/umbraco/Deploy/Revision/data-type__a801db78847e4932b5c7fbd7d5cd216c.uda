@@ -1,0 +1,34 @@
+{
+  "Name": "Newsletter Category Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Community.Contentment.DataList",
+  "DatabaseType": 0,
+  "Configuration": {
+    "dataSource": [
+      {
+        "key": "Umb.Fyi.DataSources.NewsletterCategoryDataSource, Umb.Fyi",
+        "value": {}
+      }
+    ],
+    "listEditor": [
+      {
+        "key": "Umbraco.Community.Contentment.DataEditors.ItemPickerDataListEditor, Umbraco.Community.Contentment",
+        "value": {
+          "overlaySize": [
+            "small"
+          ],
+          "listType": "list",
+          "defaultIcon": "icon-tag color-light-green",
+          "enableFilter": "1",
+          "maxItems": 1,
+          "allowClear": "0"
+        }
+      }
+    ]
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/a801db78847e4932b5c7fbd7d5cd216c",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

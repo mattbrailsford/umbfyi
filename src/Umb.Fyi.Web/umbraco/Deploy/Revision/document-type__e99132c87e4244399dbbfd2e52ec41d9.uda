@@ -1,0 +1,63 @@
+{
+  "Name": "Newsletters",
+  "Alias": "newslettersContainer",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [
+    "umb://template/1b5f9e558f2647b796c822dcc0b48f1e"
+  ],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-mailbox color-light-green",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": true,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": [
+      "umb://document-type/119ae1bc9453455aab66f53c5455a50d"
+    ]
+  },
+  "Parent": "umb://document-type-container/e5a56b27e6f84ba8bd5b75cd2db405e5",
+  "CompositionContentTypes": [
+    "umb://document-type/1b0f6e195f87445385b6e95d43e6d5da",
+    "umb://document-type/db214942b70340adb15140ba8bb5990c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e99132c87e4244399dbbfd2e52ec41d9",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/e5a56b27e6f84ba8bd5b75cd2db405e5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/119ae1bc9453455aab66f53c5455a50d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/1b0f6e195f87445385b6e95d43e6d5da",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/db214942b70340adb15140ba8bb5990c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/1b5f9e558f2647b796c822dcc0b48f1e",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.5"
+}

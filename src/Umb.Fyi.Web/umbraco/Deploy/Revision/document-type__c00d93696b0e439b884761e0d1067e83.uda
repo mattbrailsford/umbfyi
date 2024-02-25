@@ -1,0 +1,43 @@
+{
+  "Name": "Newsletter Group Block",
+  "Alias": "newsletterGroupBlock",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-tag color-light-green",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/70fd4d933af44405a1cae556fe14b54b",
+  "CompositionContentTypes": [
+    "umb://document-type/cd56b7c99c0f454fb4096e9225f1bd1c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c00d93696b0e439b884761e0d1067e83",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/70fd4d933af44405a1cae556fe14b54b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/cd56b7c99c0f454fb4096e9225f1bd1c",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.2"
+}

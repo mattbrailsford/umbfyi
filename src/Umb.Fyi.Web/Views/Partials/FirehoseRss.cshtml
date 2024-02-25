@@ -1,0 +1,53 @@
+﻿@using System.Linq.Expressions;
+@using Microsoft.Extensions.DependencyInjection;
+@using Umb.Fyi.Hub.Services;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    const string DATE_FORMAT = "ddd, dd MMM yyyy HH:mm:ss K";
+    var feedUrl = Model.Url(mode: UrlMode.Absolute);
+    var isEvents = Model.UrlSegment.InvariantEquals("events");
+
+}<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="@(Model.Url())?altTemplate=FirehoseXslt" type="text/xsl" media="screen" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:umb="http://www.umbraco.com" umb:media-type="@(Model.UrlSegment)">
+    <channel>
+        <atom:link href="@feedUrl" rel="self" type="application/rss+xml" />
+        <title>UMB.FYI Firehose - @Model.Name</title>
+        @Html.Raw($"<link>")@(feedUrl)@Html.Raw($"</link>")
+        <description>Aggregated news from the Umbraco community</description>
+        <pubDate>@Model.CreateDate.ToUniversalTime().ToString(DATE_FORMAT)</pubDate>
+        <lastBuildDate>@DateTime.UtcNow.ToString(DATE_FORMAT)</lastBuildDate>
+        <language>en</language>
+        <generator>Umbraco</generator>
+        @{
+            var mediaService = Context.RequestServices.GetRequiredService<MediaItemService>();
+            var categories = (ViewData["categories"] + string.Empty)
+                .Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(x => !isEvents || x != "event")
+                .ToArray();
+            DateTime? from = (ViewData["from"] + "") != ""
+                ? DateTime.Parse(ViewData["from"].ToString())
+                : null;
+            DateTime? to = (ViewData["to"] + "") != ""
+                ? DateTime.Parse(ViewData["to"].ToString())
+                : null;
+            var items = isEvents
+                ? mediaService.GetEvents(categories, from, to)
+                : mediaService.GetNews(categories, from, to);
+            foreach (var item in items)
+            {
+                <item>
+                    <guid>@item.Link</guid>
+                    <title>@item.Title</title>
+                    @Html.Raw($"<link>")@(item.Link)@Html.Raw($"</link>")
+                    <description><![CDATA[@item.Description]]></description>
+                    <pubDate>@item.Date.ToUniversalTime().ToString(DATE_FORMAT)</pubDate>
+                    @foreach(var tag in item.Tags.Where(x => !isEvents || x != "event"))
+                    {
+                        <category>@tag</category>
+                    }
+                </item>
+            }
+        }
+    </channel>
+</rss>

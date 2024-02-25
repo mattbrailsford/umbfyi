@@ -1,0 +1,21 @@
+{
+  "Name": "Newsletter Archive Page",
+  "Alias": "NewsletterArchivePage",
+  "File": "umb://template-file/NewsletterArchivePage.cshtml",
+  "Master": "umb://template/1e261588572d42f9ab74882cf993d466",
+  "Udi": "umb://template/1b5f9e558f2647b796c822dcc0b48f1e",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/NewsletterArchivePage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/1e261588572d42f9ab74882cf993d466",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "12.0.4"
+}

@@ -1,0 +1,2 @@
+﻿@inherits Umbraco.Cms.Web.Common.Macros.PartialViewMacroPage
+@Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.MacroParameters["markup"]?.ToString()))

@@ -1,0 +1,105 @@
+{
+  "Name": "Newsletter Group",
+  "Alias": "newsletterGroupComp",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-tag color-green",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "5c527d26-39c7-4328-8ad6-5207b359d836",
+      "Name": "Content",
+      "SortOrder": 10,
+      "Type": 0,
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "37345d5b-d43c-411a-88f8-76fa04988269",
+          "Alias": "groupEmoji",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Select an emoji for this group.",
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Emoji",
+          "SortOrder": 10,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "b08dc960-4572-4680-82e3-dd2b9ebbfa5f",
+          "Alias": "groupAlias",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Give this group a unique web safe alias.",
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Alias",
+          "SortOrder": 30,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "b805e1e7-672c-4e26-b00e-0ee29816f065",
+          "Alias": "groupTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Enter a title for this group.",
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Title",
+          "SortOrder": 20,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cd56b7c99c0f454fb4096e9225f1bd1c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.2"
+}

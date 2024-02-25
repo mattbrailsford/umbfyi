@@ -1,0 +1,17 @@
+{
+  "Name": "Multiple Media Picker (legacy)",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MediaPicker",
+  "DatabaseType": 0,
+  "Configuration": {
+    "multiPicker": true,
+    "onlyImages": false,
+    "disableFolderSelect": false,
+    "ignoreUserStartNodes": false
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/9dbbcbbb2327434ab355af1b84e5010a",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

@@ -1,0 +1,55 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Sitemap>
+@{
+    Layout = null;
+    Context.Response.ContentType = "text/xml";
+    IPublishedContent homePage = Model.Root();
+
+    // Define any document types to exclude
+    string[] excludedDocumentTypes = new[] { "sitemap", "feed" };
+
+}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemalocation="http://www.google.com/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    @{
+        // Sitemap entry for the homepage is rendered
+        RenderSiteMapUrlEntry(homePage);
+
+        // Sitemap for the rest of the site is rendered
+        RenderSiteMapUrlEntriesForChildren(homePage);
+    }
+</urlset>
+
+@{
+    // This helper is used to render the sitemap entries
+    void RenderSiteMapUrlEntry(IPublishedContent node)
+    {
+        <url>
+            <loc>@node.Url(mode: UrlMode.Absolute)</loc>
+            <lastmod>@(string.Format("{0:s}+00:00", node.UpdateDate))</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.5</priority>
+        </url>
+    }
+
+    // This helper is used to filter which pages are shown in the sitemap
+    void RenderSiteMapUrlEntriesForChildren(IPublishedContent parentPage)
+    {
+        // Filter the query based on the excludedDocumentTypes and hideFromXmlSiteMap values
+        foreach (var page in parentPage.Children.Where(x => !excludedDocumentTypes.InvariantContains(x.ContentType.Alias) && !x.Value<bool>("umbracoSitemapHide")))
+        {
+            // Skip newsletters set in the future
+            if (page is Newsletter newsletter && newsletter.PublishDate > DateTime.UtcNow)
+                continue;
+
+            RenderSiteMapUrlEntry(page);
+
+            // Filter the query based on the maxSiteMapDepth and hideFromXmlSiteMap values
+            if (page.Children.Any(x => !x.Value<bool>("umbracoSitemapHide")))
+            {
+                RenderSiteMapUrlEntriesForChildren(page);
+            }
+        }
+    }
+}

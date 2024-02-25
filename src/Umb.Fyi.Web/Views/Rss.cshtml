@@ -1,0 +1,53 @@
+﻿@using Umb.Fyi.Models;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+
+    Context.Response.Headers["Content-Type"] =  "text/xml";
+
+    const string DATE_FORMAT = "ddd, dd MMM yyyy HH:mm:ss K";
+    var feedUrl = Model.Url(mode: UrlMode.Absolute);
+    var isEvents = Model.UrlSegment.InvariantEquals("events");
+    var currentCategory = "";
+
+    var homePage = Model.AncestorOrSelf<HomePage>();
+    var newsletters = homePage.Children<NewslettersContainer>().FirstOrDefault();
+    var newsletter = newsletters.Children<Newsletter>()
+        .Where(x => x.PublishDate < DateTime.UtcNow)
+        .OrderByDescending(x => x.PublishDate)
+        .First();
+
+}<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="@feedUrl" rel="self" type="application/rss+xml" />
+        <title>UMB.FYI</title>
+        @Html.Raw($"<link>")@(feedUrl)@Html.Raw($"</link>")
+        <description>Aggregated news from the Umbraco community</description>
+        <pubDate>@newsletter.PublishDate.ToUniversalTime().ToString(DATE_FORMAT)</pubDate>
+        <lastBuildDate>@DateTime.UtcNow.ToString(DATE_FORMAT)</lastBuildDate>
+        <language>en</language>
+        <generator>Umbraco</generator>
+        @{
+            foreach (var block in newsletter.Content)
+            {
+                if (block.Content is NewsletterGroupBlock grp)
+                {
+                    currentCategory = grp.GroupAlias;
+                } 
+                else if (block.Content is NewsletterItemBlock itm)
+                {
+                    <item>
+                        <guid>@itm.ItemLink</guid>
+                        <title>@itm.ItemTitle</title>
+                        @Html.Raw($"<link>")@(itm.ItemLink)@Html.Raw($"</link>")
+                        <description><![CDATA[@itm.ItemDescription]]></description>
+                        <pubDate>@newsletter.PublishDate.ToUniversalTime().ToString(DATE_FORMAT)</pubDate>
+                        <category>@currentCategory</category>
+                    </item>
+                }  
+            }
+        }
+    </channel>
+</rss>

@@ -1,0 +1,33 @@
+{
+  "Name": "Newsletter Content Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "DatabaseType": 0,
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "c00d9369-6b0e-439b-8847-61e0d1067e83",
+        "view": "~/views/blocks/newsletter-group-block.html",
+        "label": "{{ groupTitle || 'Newsletter Group' }}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "808cbd76-e16f-44cb-93ca-f2b207771514",
+        "view": "~/views/blocks/newsletter-item-block.html",
+        "label": "{{ itemTitle || 'Newsletter Item' }}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/49ea934d0f3448db866734b8a1b8e2c3",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

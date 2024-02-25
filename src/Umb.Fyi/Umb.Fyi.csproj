@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Discord.Net" Version="3.12.0" />
+      <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
+      <PackageReference Include="Our.Umbraco.Community.Contentment.Core" Version="4.4.6" />
+      <PackageReference Include="SixLabors.Fonts" Version="2.0.1" />
+      <PackageReference Include="Skybrud.Social.Mastodon" Version="1.0.0-alpha003" />
+      <PackageReference Include="SmartReader" Version="0.9.4" />
+      <PackageReference Include="Umbraco.Cms.Core" Version="12.3.6" />
+      <PackageReference Include="Umbraco.Cms.Infrastructure" Version="12.3.6" />
+      <PackageReference Include="Websocket.Client" Version="5.0.0" />
+        <PackageReference Include="Cultiv.Hangfire" Version="3.1.2" />
+        <PackageReference Include="Ical.Net" Version="4.2.0" />
+        <PackageReference Include="RT.Comb" Version="4.0.1" />
+        <PackageReference Include="Skybrud.Essentials" Version="1.1.52" />
+        <PackageReference Include="Umbraco.UIBuilder.Startup" Version="12.0.2" />
+      <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

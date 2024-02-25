@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umb.Fyi.Models.HomePage>
+@{
+	Layout = "Layout.cshtml";
+}
+@section head {
+}
+<div class="flex flex-col h-full max-w-xl mx-auto">
+    <div class="flex-1 text-center py-16 md:py-32 px-8">
+        <div class="flex justify-center gap-8 mb-8 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" /><path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren"><path d="M7 12a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v6H7v-6Z" /><path d="M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2H5v-2Z" /><path d="M21 12h1" /><path d="M18.5 4.5 18 5" /><path d="M2 12h1" /><path d="M12 2v1" /><path d="m4.929 4.929.707.707" /><path d="M12 12v6" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mails"><rect width="16" height="13" x="6" y="4" rx="2" /><path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7" /><path d="M2 8v11c0 1.1.9 2 2 2h14" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
+        </div>
+        <div class="mb-12 sm:mb-16">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="mx-auto fill-current h-12 max-w-full sm:h-16 md:h-20">
+                    <title>UMB.FYI</title>
+                    <path d="M0 0v90h460V0h-10zm19.998 19.994h9.998V60h30.008V19.994h9.998L70 59.996l-10 10H19.998Zm70 0H130l10 10 .002 40.002h-9.998V29.99h-10.012v40.006h-9.998V29.99h-9.998v40.006h-9.998zm70 0H200l10 10 .002 10.008h-9.998V50h9.998v19.996h-50.004zm40.006 30.008h-30.008V60h30.008zm0-9.999V29.992h-30.008v10.011zm69.998-20.01h40.002v9.997h-40.006v10.012h30.008V50h-30.008v19.996H260l.002-40.002zm59.998 0h9.998v20.009h30.008V19.994h9.998l-.002 20.002-10 10h-10.008v19.996h-9.998V49.996h-9.994l-10-10zm74.994.002H435v9.999h-10.01v30.008H435V70c-10.002 0 2.534.007-30.006 0v-9.998h9.998V29.994h-9.998zM230 59.999h9.998v9.998H230Z" />
+                </svg>
+            </a>
+        </div>
+        <div class="mb-16 text-center prose-lg prose-p:text-white prose-headings:mb-4 prose-headings:text-umb-pink prose-h1:text-2xl prose-h2:text-2xl prose-a:underline hover:prose-a:text-umb-pink">
+            @Model.BodyText
+        </div>
+        <form action="https://umbfyi.mailcoach.app/subscribe/2dcf2814-bb62-490e-b9e9-ab46b00184d3" method="post" class="flex flex-col gap-2 sm:flex-row">
+            <input type="email" name="email" placeholder="Your email address" class="py-2 px-4 rounded-sm flex-1 text-umb-blue-dark" />
+            <!--
+                This is the honeypot field, this should be invisible to users
+                when filled in, the subscriber won't be created but will still
+                receive a "successfully subscribed" page to fool spam bots.
+            -->
+            <div style="position: absolute; left: -9999px">
+                <label for="website-name">Your name</label>
+                <input type="text" id="website-name" name="name" tabindex="-1" autocomplete="nope" />
+            </div>
+            <input type="submit" value="Subscribe" class="py-2 px-4 rounded-sm bg-umb-pink text-umb-blue-dark cursor-pointer font-bold">
+        </form>
+    </div>
+    <div class="text-center p-4">
+        @foreach(var child in Model.Children.Where(x => x.TemplateId != null && !x.Value<bool>("umbracoNaviHide")))
+        {
+            <a href="@child.Url()" class="hover:underline px-4">@child.Name</a>
+        }
+        <br /><br />
+        <p>UMB.FYI is built with ❤ by the Umbraco community  and is not affiliated with Umbraco HQ</p>
+    </div>
+</div> 

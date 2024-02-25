@@ -1,0 +1,133 @@
+{
+  "Name": "Newsletter Item",
+  "Alias": "newsletterItemComp",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-article color-green",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e1f5f946-bc51-4b95-89b6-4fd9254823ff",
+      "Name": "Content",
+      "SortOrder": 10,
+      "Type": 0,
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "161b86b9-5ac3-4806-9c0a-60e7aab88d96",
+          "Alias": "itemLink",
+          "DataType": "umb://data-type/a1deee8dc7c24e59b9404dd9b0a6bd13",
+          "Description": "Enter the link for this item.",
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Link",
+          "SortOrder": 20,
+          "Validation": "https?://[a-zA-Z0-9-.]+.[a-zA-Z]{2,}",
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "2caee043-9de2-4f9d-9736-337c233359b9",
+          "Alias": "itemTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Enter the descriptive title for this item.",
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Title",
+          "SortOrder": 30,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "79153e59-1c3c-4bd0-8a03-7a4bfc4e330b",
+          "Alias": "itemDescription",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Give this item a short description.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Description",
+          "SortOrder": 40,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "7adecf59-8143-4d77-b3fa-2f650d2ca761",
+          "Alias": "itemEmoji",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Select an emoji for this item.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Emoji",
+          "SortOrder": 10,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/756b8dc2d1f44a49a201bf439d3b154b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/a1deee8dc7c24e59b9404dd9b0a6bd13",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.5"
+}

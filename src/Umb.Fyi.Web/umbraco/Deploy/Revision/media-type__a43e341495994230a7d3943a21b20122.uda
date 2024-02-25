@@ -1,0 +1,103 @@
+{
+  "Name": "Article",
+  "Alias": "umbracoMediaArticle",
+  "Icon": "icon-article",
+  "Thumbnail": "icon-article",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": true,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "9af3bd65-f687-4453-9518-5f180d1898ec",
+      "Name": "Article",
+      "SortOrder": 1,
+      "Type": 0,
+      "Alias": "article",
+      "PropertyTypes": [
+        {
+          "Key": "0000002e-0000-0000-0000-000000000000",
+          "Alias": "umbracoFile",
+          "DataType": "umb://data-type/bc1e266cdac44164bf088a1ec6a7143d",
+          "Description": null,
+          "Mandatory": true,
+          "MandatoryMessage": null,
+          "Name": "Article",
+          "SortOrder": 0,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "0000002f-0000-0000-0000-000000000000",
+          "Alias": "umbracoExtension",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": null,
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Type",
+          "SortOrder": 1,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "00000030-0000-0000-0000-000000000000",
+          "Alias": "umbracoBytes",
+          "DataType": "umb://data-type/930861bfe2624eada704f99453565708",
+          "Description": "in bytes",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Size",
+          "SortOrder": 2,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://media-type/a43e341495994230a7d3943a21b20122",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/930861bfe2624eada704f99453565708",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/bc1e266cdac44164bf088a1ec6a7143d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.MediaTypeArtifact",
+  "__version": "12.0.2"
+}

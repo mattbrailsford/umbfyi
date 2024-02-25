@@ -1,0 +1,117 @@
+{
+  "Name": "Newsletter",
+  "Alias": "newsletter",
+  "DefaultTemplate": "umb://template/addcb633ddfc4539a6c86a9365d0b322",
+  "AllowedTemplates": [
+    "umb://template/addcb633ddfc4539a6c86a9365d0b322"
+  ],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-newspaper-alt color-light-green",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "f89e02bc-7e3e-48fd-aef9-1c2272005694",
+      "Name": "Content",
+      "SortOrder": 0,
+      "Type": 0,
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "22ab3356-f7c3-4a15-8757-ed1510e9d8a7",
+          "Alias": "preheader",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "A short preheader that usually displays as that muted text, shaded gray, immediately after the subject line.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Preheader",
+          "SortOrder": 0,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "4a06cee0-02bf-40d4-a20b-bb69ceaa187b",
+          "Alias": "publishDate",
+          "DataType": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",
+          "Description": "The official publication date for this newsletter.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Publish Date",
+          "SortOrder": 2,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "934ee660-cee9-4ebd-8137-abc9575dd8d1",
+          "Alias": "content",
+          "DataType": "umb://data-type/49ea934d0f3448db866734b8a1b8e2c3",
+          "Description": "The main content of this newsletter.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Content",
+          "SortOrder": 1,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/119ae1bc9453455aab66f53c5455a50d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/49ea934d0f3448db866734b8a1b8e2c3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/addcb633ddfc4539a6c86a9365d0b322",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.5"
+}

@@ -1,0 +1,346 @@
+﻿@using Umb.Fyi.Models;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Newsletter>
+@{
+    Layout = null;
+
+    var isEmail = Context.Request.Query.ContainsKey("nl");
+}
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>UMB.FYI @Model.Name</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="UMB.FYI @Model.Name" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="umb.fyi">
+    <meta name="twitter:description" content="UMB.FYI @Model.Name">
+    @if (!string.IsNullOrWhiteSpace(Model.Preheader))
+    {
+        <meta name="description" content="Umbraco news from @Model.Name including @Model.Preheader" />
+        <meta property="og:title" content="@Model.Preheader" />
+        <meta name="twitter:title" content="@Model.Preheader">
+    }
+    <meta property="og:image" content="https://umb.fyi/umbraco/api/ogapi/image1200x627/@(Model.Name)" />
+    <meta name="twitter:image" content="https://umb.fyi/umbraco/api/ogapi/image1200x627/@(Model.Name)">
+    <meta property="og:url" content="@Model.Url(mode:UrlMode.Absolute)" />
+    <meta name="twitter:url" content="@Model.Url(mode:UrlMode.Absolute)">
+    <link rel="canonical" href="@Model.Url(mode:UrlMode.Absolute)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <style type="text/css">
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      html,
+      body,
+      .document {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin: 0 auto;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+        border: 0;
+      }
+
+      *[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      .x-gmail-data-detectors,
+      .x-gmail-data-detectors *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+      }
+
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+      }
+
+      .umbfyi-group-emoji img {
+          width: 36px;
+          height: 36px;
+      }
+
+      @@media screen and (max-width: 600px) {
+        .container {
+          width: 100%;
+          margin: auto;
+        }
+        .stack {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+
+      body,
+      p,
+      td,
+      tr,
+      .body,
+      table,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      div,
+      span {
+        background-color: #fefefe !important;
+        color: #010101 !important;
+      }
+
+      @@media (prefers-color-scheme: dark) {
+        body,
+        p,
+        td,
+        tr,
+        .body,
+        table,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        span {
+          background-color: #27292d !important;
+          color: #fefefe !important;
+        }
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: underline !important;
+      }
+    </style>
+    <!--[if mso | ie]>
+      <style type="text/css">
+        a {
+          background-color: #fefefe !important;
+          color: #010101 !important;
+        }
+        @@media (prefers-color-scheme: dark) {
+          a {
+            background-color: #27292d !important;
+            color: #fefefe !important;
+          }
+        }
+      </style>
+    <![endif]-->
+    @if (!isEmail)
+    {
+        <script type="application/ld+json">
+            {
+              "@@context": "https://schema.org",
+              "@@graph": [
+                {
+                    "@@id": "@Model.Name",
+                    "@@type": "PublicationIssue",
+                    "issueNumber": "@Model.Name",
+                    "datePublished": "@Model.Name",
+                    "name": "UMB.FYI @Model.Name",
+                    "abstract": "@Model.Preheader",
+                    "url": "@Model.Url(mode: UrlMode.Absolute)",
+                    "about": "Umbraco",
+                    "keywords": [ "umbraco", "news", "events" ],
+                    "isPartOf": {
+                        "@@id": "umb.fyi",
+                        "@@type": "Periodical",
+                        "name": "UMB.FYI",
+                        "url": "https://umb.fyi"
+                    }
+                }
+              ]
+            }
+        </script>
+    }
+</head>
+  <body class="notranslate">
+
+    <div style="display: none; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; visibility: hidden;">
+      @Model.Preheader
+    </div>
+
+    <div style="display: none; max-height: 0px; overflow: hidden">
+      <br />
+    </div>
+
+    <table align="center" class="document">
+      <tbody>
+        <tr>
+          <td valign="top">
+
+            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600">
+              <tbody>
+                <tr class="inner-body">
+                  <td>
+
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tbody>
+                        <tr class="header">
+                          <td class="container">
+
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="container" style="padding: 15px 15px">
+                                            <div style="text-align: center">
+                                                <span style="margin-right: 2px;">
+                                                    <a href="https://umb.fyi"><span>Sign Up</span></a>
+                                                </span>
+                                                |
+                                                <span style="margin-left: 2px">
+                                                    <a href="@Model.Url(mode:UrlMode.Absolute)"><span>View Online</span></a>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+
+                            @* POSSIBLE LOGO HERE
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                <td class="container" style="text-align: center">UMB.FYI</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                            <br />*@
+
+                            <table style="table-layout: fixed; width: 100%;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 0; border-collapse: collapse; border-spacing: 0; margin: 0;">
+                                            <div style="text-align: center">
+                                                <h1>
+                                                    <strong style="font-size: 32px;">UMB.FYI @Model.Name</strong >
+                                                </h1>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="container">
+
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td style="padding: 0px">
+
+                                    @Html.GetBlockListHtml(Model.Content)
+
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="container" style="padding: 15px 15px">
+                                                    <div class="text-block" style="text-align: center;">
+                                                    ---
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                        <tr>
+                                            <td class="container" style="padding: 15px 15px">
+                                            <div class="text-block">
+                                                @if (isEmail)
+                                                {
+                                                    <div>
+                                                        You are receiving this email because you signed up for it on our website at <a href="https://umb.fyi">UMB.FYI</a>
+                                                        <br /><br />
+                                                        If you don't want to receive future editions of UMB.FYI, please <a href="{{ unsubscribeUrl }}">click here to unsubscribe</a>.
+                                                        <br /><br />
+                                                    </div>
+                                                }
+                                                <span>UMB.FYI, Unit 128100, PO Box 4336, Manchester, M61 0BW</span>
+                                                <br /><br />
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

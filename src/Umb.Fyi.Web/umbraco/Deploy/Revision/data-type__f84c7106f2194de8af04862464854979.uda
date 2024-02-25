@@ -1,0 +1,32 @@
+{
+  "Name": "Newsletter Categories",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Community.Contentment.ContentBlocks",
+  "DatabaseType": 0,
+  "Configuration": {
+    "displayMode": [
+      {
+        "key": "Umbraco.Community.Contentment.DataEditors.ListDisplayMode, Umbraco.Community.Contentment",
+        "value": {}
+      }
+    ],
+    "contentBlockTypes": [
+      {
+        "key": "49820c78-0298-4b48-aacc-015f1bb8825b",
+        "value": {
+          "nameTemplate": "{{ title }}",
+          "overlaySize": "medium",
+          "enablePreview": "0"
+        }
+      }
+    ],
+    "enableFilter": "0",
+    "disableSorting": "0",
+    "enableDevMode": "0"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/f84c7106f2194de8af04862464854979",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

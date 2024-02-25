@@ -1,0 +1,67 @@
+{
+  "Name": "Folder",
+  "Alias": "Folder",
+  "Icon": "icon-folder",
+  "Thumbnail": "icon-folder",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": true,
+    "IsElementType": false,
+    "AllowedChildContentTypes": [
+      "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+      "umb://media-type/cc07b31308434aa8bbda871c8da728c8",
+      "umb://media-type/4c52d8ab54e640cd999c7a5f24903e4d",
+      "umb://media-type/f6c515bb653c4bdc821c987729ebe327",
+      "umb://media-type/a5ddeee08fd84ceea6586f1fcdb00de3",
+      "umb://media-type/a43e341495994230a7d3943a21b20122",
+      "umb://media-type/c4b1efcfa9d541c49621e9d273b52a9c"
+    ]
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+  "Dependencies": [
+    {
+      "Udi": "umb://media-type/4c52d8ab54e640cd999c7a5f24903e4d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/a43e341495994230a7d3943a21b20122",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/a5ddeee08fd84ceea6586f1fcdb00de3",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/c4b1efcfa9d541c49621e9d273b52a9c",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/cc07b31308434aa8bbda871c8da728c8",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://media-type/f6c515bb653c4bdc821c987729ebe327",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.MediaTypeArtifact",
+  "__version": "12.0.2"
+}

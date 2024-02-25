@@ -1,0 +1,35 @@
+{
+  "Name": "Newsletter Groups",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Community.Contentment.ContentBlocks",
+  "DatabaseType": 0,
+  "Configuration": {
+    "displayMode": [
+      {
+        "key": "Umbraco.Community.Contentment.DataEditors.BlocksDisplayMode, Umbraco.Community.Contentment",
+        "value": {
+          "allowCopy": "1",
+          "allowCreateContentTemplate": "1"
+        }
+      }
+    ],
+    "contentBlockTypes": [
+      {
+        "key": "c00d9369-6b0e-439b-8847-61e0d1067e83",
+        "value": {
+          "nameTemplate": "{{ title }}",
+          "overlaySize": "medium",
+          "enablePreview": "0"
+        }
+      }
+    ],
+    "enableFilter": "0",
+    "disableSorting": "0",
+    "enableDevMode": "0"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/9a0f954dab8241f4b767f993960ee178",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

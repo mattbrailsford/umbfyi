@@ -1,0 +1,174 @@
+{
+  "Name": "Advanced",
+  "Alias": "advancedComp",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-plugin color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "914173ee-a455-4d2b-a72a-9bd02557976d",
+      "Name": "Advanced",
+      "SortOrder": 70,
+      "Type": 0,
+      "Alias": "advanced",
+      "PropertyTypes": [
+        {
+          "Key": "2d4a2978-f949-45a9-a785-440a58563adf",
+          "Alias": "umbracoUrlAlias",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Defines a comma-separated list of alternative URLs this page should be accessible from. Good for marketing purposes.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "URL Alias",
+          "SortOrder": 1,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "317c2c07-bbda-4443-a9ef-6bb722f8b57e",
+          "Alias": "umbracoRedirect",
+          "DataType": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+          "Description": "If sets redirects any request for this page to the linked page instead.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Redirect to Node",
+          "SortOrder": 2,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "745d9027-6e00-4349-8e0d-9417b2f7e56d",
+          "Alias": "rawMarkup",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "DANGEROUS! Drop in any raw markup to be appended before the closing body tag. Used mostly for analytics code snippets. It's best not to use this field unless you know what you are doing.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Raw Markup",
+          "SortOrder": 5,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "b1e70fc2-acd6-4b77-9e6c-335eb22cf619",
+          "Alias": "umbracoSitemapHide",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": "Hide this page from the sitemap",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Hide from Sitemap",
+          "SortOrder": 4,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "bd9aeac4-15d8-408f-ad30-a29df16ee139",
+          "Alias": "umbracoUrlName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Overrides the default URL name.",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "URL Name",
+          "SortOrder": 0,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "dafdc95f-c87b-4c17-af0b-78ccd1ffa31e",
+          "Alias": "umbracoNaviHide",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": "Hide this page from navigation menus",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Hide from Navigation",
+          "SortOrder": 3,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1b0f6e195f87445385b6e95d43e6d5da",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/292453f4c4314f31b39d6925a7d905f9",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.5"
+}

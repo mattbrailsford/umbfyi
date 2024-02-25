@@ -1,0 +1,16 @@
+{
+  "Name": "Newsletter",
+  "Alias": "Newsletter",
+  "File": "umb://template-file/Newsletter.cshtml",
+  "Master": null,
+  "Udi": "umb://template/addcb633ddfc4539a6c86a9365d0b322",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Newsletter.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "12.0.3"
+}

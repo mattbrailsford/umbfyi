@@ -1,0 +1,22 @@
+﻿<div ng-controller="Umb.Fyi.PropertyEditors.linkinputController">
+    
+    <div class="input-append" style="display: flex; width: 100%;">
+        <input type="text"
+               id="{{model.alias}}"
+               name="textbox"
+               ng-model="model.value"
+               class="umb-property-editor umb-textstring textstring"
+               style="display: block; flex: 1;"
+               ng-readonly="readonly" />
+        <button class="add-on" style="height: 32px;"
+                ng-disabled="!model.value.startsWith('http')"
+                ng-click="openLink()">
+            <i class="icon-link"></i>
+        </button>
+        <button class="add-on" style="height: 32px;"
+                ng-disabled="!model.value.startsWith('http')"
+                ng-click="summarizeLink()">
+            <i class="icon-wand"></i>
+        </button>
+    </div>
+</div>

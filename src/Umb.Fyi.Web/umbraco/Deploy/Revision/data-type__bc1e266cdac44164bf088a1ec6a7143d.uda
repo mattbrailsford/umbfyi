@@ -1,0 +1,27 @@
+{
+  "Name": "Upload Article",
+  "Alias": "",
+  "EditorAlias": "Umbraco.UploadField",
+  "DatabaseType": 1,
+  "Configuration": {
+    "fileExtensions": [
+      {
+        "id": 0,
+        "value": "pdf"
+      },
+      {
+        "id": 1,
+        "value": "docx"
+      },
+      {
+        "id": 2,
+        "value": "doc"
+      }
+    ]
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/bc1e266cdac44164bf088a1ec6a7143d",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.2"
+}

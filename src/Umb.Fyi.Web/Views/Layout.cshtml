@@ -1,0 +1,54 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+
+	var pageTitle = Model.Value<string>("pageTitle");
+    if (pageTitle.IsNullOrWhiteSpace()) pageTitle = Model.Name;
+
+    var metaTitle = Model.ContentType.Alias == "homePage"
+        ? $"{Model.Value<string>("siteName")} - {Model.Value<string>("siteDescription")}"
+        : $"{pageTitle} - {Model.Value<string>("siteName", fallback: Fallback.ToAncestors)}";
+    var metaDescription = Model.Value<string>("metaDescription");
+    var metaImage = Model.Value<IPublishedContent>("metaImage", fallback: Fallback.ToAncestors);
+}
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b264f">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="umb.fyi">
+    <title>@metaTitle</title>
+    <meta property="og:title" content="@metaTitle" />
+    @if (!string.IsNullOrWhiteSpace(metaDescription))
+    {
+        <meta name="description" content="@metaDescription" />
+        <meta property="og:description" content="@metaDescription" />
+        <meta name="twitter:description" content="@metaDescription" />
+    }
+    @if (metaImage != null)
+    {
+        <meta name="twitter:image" content="@metaImage.Url(mode: UrlMode.Absolute)">
+        <meta property="og:image" content="@metaImage.Url(mode: UrlMode.Absolute)" />
+        <meta name="twitter:image" content="@metaImage.Url(mode: UrlMode.Absolute)" />
+    }
+
+    <meta name="twitter:url" content="@Model.Url(mode:UrlMode.Absolute).TrimEnd('/')">
+    <meta property="og:url" content="@Model.Url(mode:UrlMode.Absolute).TrimEnd('/')" />
+    <link rel="canonical" href="@Model.Url(mode:UrlMode.Absolute).TrimEnd('/')" />
+    <link rel="alternate" type="application/rss+xml" href="/rss" title="UMB.FYI" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    @RenderSection("head", false)
+</head>
+<body class="font-sans bg-tiled bg-fixed text-white text-center h-full">
+    @RenderBody()
+    @Html.Raw(Model.Value("rawMarkup"))
+</body>
+</html>

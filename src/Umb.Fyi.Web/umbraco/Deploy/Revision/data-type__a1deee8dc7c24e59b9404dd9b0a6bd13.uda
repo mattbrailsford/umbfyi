@@ -1,0 +1,15 @@
+{
+  "Name": "Link Input",
+  "Alias": "",
+  "EditorAlias": "linkinput",
+  "DatabaseType": 1,
+  "Configuration": {
+    "systemPrompt": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the following text and summarize it into a concise abstract paragraph of thirty words or less. The summary should be written from the point of view of the author, and aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text. Please avoid unnecessary details or tangential points.",
+    "targetProperty": "itemDescription"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/a1deee8dc7c24e59b9404dd9b0a6bd13",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.5"
+}

@@ -1,0 +1,21 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umb.Fyi.Models.TextPage>
+@{
+	Layout = "Layout.cshtml";
+}
+<div class="py-16 md:py-32 px-8">
+    <div class="max-w-xl mx-auto text-center">
+        <div class="mb-16">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" class="mx-auto fill-current h-12 max-w-full sm:h-16">
+                    <title>UMB.FYI</title>
+                    <path d="M0 0v90h460V0h-10zm19.998 19.994h9.998V60h30.008V19.994h9.998L70 59.996l-10 10H19.998Zm70 0H130l10 10 .002 40.002h-9.998V29.99h-10.012v40.006h-9.998V29.99h-9.998v40.006h-9.998zm70 0H200l10 10 .002 10.008h-9.998V50h9.998v19.996h-50.004zm40.006 30.008h-30.008V60h30.008zm0-9.999V29.992h-30.008v10.011zm69.998-20.01h40.002v9.997h-40.006v10.012h30.008V50h-30.008v19.996H260l.002-40.002zm59.998 0h9.998v20.009h30.008V19.994h9.998l-.002 20.002-10 10h-10.008v19.996h-9.998V49.996h-9.994l-10-10zm74.994.002H435v9.999h-10.01v30.008H435V70c-10.002 0 2.534.007-30.006 0v-9.998h9.998V29.994h-9.998zM230 59.999h9.998v9.998H230Z" />
+                </svg>
+            </a>
+        </div>
+        @*<h2 class="text-umb-pink text-2xl mb-4">UMB.FYI Privacy Policy</h2>*@
+        <div class="text-left prose-xl prose-p:text-white prose-headings:text-umb-pink prose-h1:text-2xl prose-h1:text-center prose-h2:text-2xl prose-h2:text-center prose-h3:text-2xl prose-a:underline hover:prose-a:text-umb-pink prose-ul:list-disc prose-ul:list-outside prose-ol:list-decimal prose-ol:list-outside">
+            @Model.BodyText
+        </div>
+    </div>
+</div>

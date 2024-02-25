@@ -1,0 +1,71 @@
+{
+  "Name": "Sitemap",
+  "Alias": "sitemap",
+  "DefaultTemplate": "umb://template/f1f59c1e3ea0411a807e0d7b149759fc",
+  "AllowedTemplates": [
+    "umb://template/f1f59c1e3ea0411a807e0d7b149759fc"
+  ],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-mindmap color-pink",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": false,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": null,
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "fc3eb788-981f-4517-a0bc-c9c1611f7e8d",
+      "Name": "Advanced",
+      "SortOrder": 0,
+      "Type": 0,
+      "Alias": "advanced",
+      "PropertyTypes": [
+        {
+          "Key": "5d6331a0-fa7e-4a3e-9435-3d4c2e0d1f1d",
+          "Alias": "umbracoNaviHide",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": "Hide this page from navigation menus",
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Hide from Navigation",
+          "SortOrder": 0,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/3a97a99b9193472992a36c3150aba830",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/f1f59c1e3ea0411a807e0d7b149759fc",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.5"
+}

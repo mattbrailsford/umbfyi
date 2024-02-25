@@ -1,0 +1,16 @@
+﻿@using System.Linq.Expressions;
+@using Microsoft.Extensions.DependencyInjection;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    Context.Response.Headers["Content-Type"] =  "text/xml";
+    @await Html.CachedPartialAsync("~/Views/Partials/FirehoseRss.cshtml", Model, TimeSpan.FromMinutes(5), true,
+        viewData:new ViewDataDictionary(ViewData)
+        {
+            { "categories", Context.Request.Query["c"] },
+            { "from", Context.Request.Query["f"] },
+            { "to", Context.Request.Query["t"] }
+        },
+        contextualKeyBuilder: (model, viewData) => $"{viewData?["categories"]}:{viewData?["from"]}:{viewData?["to"]}")
+    ;
+}

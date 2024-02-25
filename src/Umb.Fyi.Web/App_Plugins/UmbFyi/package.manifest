@@ -1,0 +1,47 @@
+{
+    "contentApps": [
+        {
+            "name": "Import",
+            "alias": "import",
+            "weight": 0,
+            "icon": "icon-download-alt",
+            "view": "~/App_Plugins/UmbFyi/backoffice/views/apps/import.html",
+            "show": [
+                "+content/newsletter"
+            ]
+        }
+    ],
+    "propertyEditors": [
+        {
+            "alias": "linkinput",
+            "name": "Link Input",
+            "icon": "icon-link",
+            "group": "Common",
+            "editor": {
+                "view": "~/App_Plugins/UmbFyi/backoffice/views/propertyeditors/linkinput/linkinput.html",
+                "supportsReadOnly": true
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "System prompt",
+                        "description": "The system prompt to use when summarizing links",
+                        "key": "systemPrompt",
+                        "view": "textarea"
+                    },
+                    {
+                        "label": "Target property",
+                        "description": "The alias of the property to copy the output value to",
+                        "key": "targetProperty",
+                        "view": "textstring"
+                    }
+                ]
+            }
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/UmbFyi/backoffice/views/apps/import.controller.js",
+        "~/App_Plugins/UmbFyi/backoffice/views/dialogs/summarizelink.dialog.js",
+        "~/App_Plugins/UmbFyi/backoffice/views/propertyeditors/linkinput/linkinput.controller.js"
+    ]
+}

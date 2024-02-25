@@ -1,0 +1,16 @@
+{
+  "Name": "Media Hub Tags",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Tags",
+  "DatabaseType": 0,
+  "Configuration": {
+    "group": "mediahub",
+    "storageType": "Csv",
+    "Delimiter": "\u0000"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/29032a949dfc44d8ab1858b36f6bf955",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.5"
+}

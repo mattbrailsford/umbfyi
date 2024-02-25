@@ -1,0 +1,60 @@
+﻿<div ng-controller="Umb.Fyi.Controllers.SummarizeLinkDialogController as vm" class="umbraco-commerce uc--narrow-view">
+
+    <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+    <umb-editor-view style="background-color: transparent;">
+
+        <umb-editor-header name="'Summarize Link'"
+            name-locked="true"
+            hide-alias="true"
+            hide-icon="true"
+            hide-description="true">
+        </umb-editor-header>
+
+        <div data-element="editor-container" class="umb-editor-container umb-panel-body umb-scrollable row-fluid ng-scope" ng-if="!vm.loading">
+            <textarea id="summary" ng-model="vm.summary" style="width: 100%; height: 100%; bordeR: 0; padding: 20px; background: transparent; resize: none; margin: 0;"></textarea>
+        </div>
+
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+
+                <umb-button type="button"
+                    button-style="link"
+                    label="Close"
+                    label-key="general_close"
+                    shortcut="esc"
+                    action="vm.close()">
+                </umb-button>
+
+                <umb-button type="button"
+                    button-style="info"
+                    label="Regenerate"
+                    action="vm.regenerate()">
+                </umb-button>
+
+                <umb-button type="button"
+                    ng-if="!vm.canApply"
+                    button-style="success"
+                    shortcut="ctrl+c"
+                    label="Copy & Close"
+                    umb-clipboard
+                    umb-clipboard-success="vm.close()"
+                    umb-clipboard-target="#summary"
+                    disabled="vm.loading || !vm.summary">
+                </umb-button>
+
+                <umb-button type="button"
+                    ng-if="vm.canApply"
+                    button-style="success"
+                    shortcut="ctrl+c"
+                    label="Apply"
+                    action="vm.apply()"
+                    disabled="vm.loading || !vm.summary">
+                </umb-button>
+
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+
+    </umb-editor-view>
+
+</div>

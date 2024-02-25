@@ -1,0 +1,27 @@
+@using Umb.Fyi.Models;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<NewsletterGroupBlock>
+<br />
+<table id="umbfyi-@Model.GroupAlias" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr>
+            <td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="text-block">
+                    <div style="text-align: center">
+                        <span style="font-size: 36px" class="umbfyi-group-emoji">@Model.GroupEmoji</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="text-block">
+                    <div style="text-align: center">
+                        <h3>
+                            <strong>@Model.GroupTitle</strong>
+                        </h3>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

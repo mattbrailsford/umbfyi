@@ -1,0 +1,16 @@
+{
+  "Name": "Rss",
+  "Alias": "Rss",
+  "File": "umb://template-file/Rss.cshtml",
+  "Master": null,
+  "Udi": "umb://template/8ded6bfc581f421ca27ba1a5f598dde0",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Rss.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "12.0.4"
+}

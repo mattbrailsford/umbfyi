@@ -1,0 +1,21 @@
+@using Umb.Fyi.Models;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<NewsletterItemBlock>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr>
+            <td class="container" style="padding: 15px 15px">
+                <div class="text-block">
+                    <span>
+                        @Model.ItemEmoji <a href="@Model.ItemLink"><span><strong>@Model.ItemTitle</strong></span></a>
+                        @if (!string.IsNullOrWhiteSpace(Model.ItemDescription))
+                        {
+                            <br />
+                            <br />
+                            <span style="font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;">@Model.ItemDescription</span>
+                        }
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

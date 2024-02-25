@@ -1,0 +1,36 @@
+{
+  "Name": "Raw Markup",
+  "Alias": "RawMarkup",
+  "MacroSource": "~/Views/MacroPartials/Raw Markup.cshtml",
+  "UseInEditor": true,
+  "CacheDuration": 0,
+  "CacheByPage": false,
+  "CacheByMember": false,
+  "DontRender": true,
+  "Properties": [
+    {
+      "Key": "8233f073-77c2-4b04-b79b-bae380e622f2",
+      "Alias": "markup",
+      "Name": "Markup",
+      "SortOrder": 0,
+      "EditorAlias": "Umbraco.TextArea"
+    },
+    {
+      "Key": "e2892041-ebc2-4107-bb62-181d0fd524cc",
+      "Alias": "enableInlineMacro",
+      "Name": "Inline",
+      "SortOrder": 1,
+      "EditorAlias": "Umbraco.TrueFalse"
+    }
+  ],
+  "Udi": "umb://macro/02284f1c28444e1d9d0c2ec1716339de",
+  "Dependencies": [
+    {
+      "Udi": "umb://partial-view-macro/Raw%20Markup.cshtml",
+      "Ordering": true,
+      "Mode": 1
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.MacroArtifact",
+  "__version": "12.0.2"
+}
