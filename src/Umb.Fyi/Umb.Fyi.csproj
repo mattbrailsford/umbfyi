@@ -12,8 +12,8 @@
       <PackageReference Include="SixLabors.Fonts" Version="2.0.1" />
       <PackageReference Include="Skybrud.Social.Mastodon" Version="1.0.0-alpha003" />
       <PackageReference Include="SmartReader" Version="0.9.4" />
-      <PackageReference Include="Umbraco.Cms.Core" Version="12.3.6" />
-      <PackageReference Include="Umbraco.Cms.Infrastructure" Version="12.3.6" />
+      <PackageReference Include="Umbraco.Cms.Core" Version="12.3.7" />
+      <PackageReference Include="Umbraco.Cms.Infrastructure" Version="12.3.7" />
       <PackageReference Include="Websocket.Client" Version="5.0.0" />
         <PackageReference Include="Cultiv.Hangfire" Version="3.1.2" />
         <PackageReference Include="Ical.Net" Version="4.2.0" />

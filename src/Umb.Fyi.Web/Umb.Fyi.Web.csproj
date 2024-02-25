@@ -16,13 +16,13 @@
     <PackageReference Include="Umbraco.Cloud.Cms.PublicAccess" Version="12.0.1" />
     <PackageReference Include="Umbraco.Cloud.Identity.Cms" Version="12.0.32" />
     <PackageReference Include="Umbraco.Cloud.StorageProviders.AzureBlob" Version="12.0.0" />
-    <PackageReference Include="Umbraco.Cms" Version="12.3.6" />
+    <PackageReference Include="Umbraco.Cms" Version="12.3.7" />
     <PackageReference Include="Umbraco.Deploy.Cloud" Version="12.0.5" />
     <PackageReference Include="Umbraco.Deploy.Contrib" Version="12.0.0" />
     <PackageReference Include="Umbraco.Deploy.Forms" Version="12.0.5" />
     <PackageReference Include="Umbraco.Forms" Version="12.1.2" />
-      <PackageReference Include="Cultiv.Hangfire" Version="3.1.2" />
-      <PackageReference Include="Umbraco.UIBuilder" Version="12.0.2" />
+    <PackageReference Include="Cultiv.Hangfire" Version="3.1.2" />
+    <PackageReference Include="Umbraco.UIBuilder" Version="12.0.2" />
   </ItemGroup>
 
   <ItemGroup>
